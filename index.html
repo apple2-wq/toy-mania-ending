@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>Toy Mania Ending</title>
 
+
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url(
+'https://fonts.googleapis.com/css2?family=Rye&display=swap'
+);
+
+
+/* =====================================
+   基本
+===================================== */
 
 * {
     box-sizing: border-box;
 }
 
+
 html,
 body {
+
     margin: 0;
+
     width: 100%;
     height: 100%;
+
     overflow: hidden;
+
+    background: #1c1008;
+
 }
 
+
 body {
-    background: #21130b;
-    font-family: "Rye", Georgia, serif;
+
+    font-family:
+        "Rye",
+        Georgia,
+        serif;
+
 }
 
 
@@ -33,320 +59,662 @@ body {
 ===================================== */
 
 #ending {
+
     position: relative;
+
     width: 100vw;
     height: 100vh;
+
     overflow: hidden;
 
+
     background:
+
         radial-gradient(
             circle at center,
-            #9c6836 0%,
-            #533016 55%,
-            #211109 100%
+            #9a6533 0%,
+            #5b3419 55%,
+            #281308 100%
         );
+
 }
 
 
 /* =====================================
-   最初に見えている背景
+   カーテンが閉じる前の背景
+
+   今はテスト用。
+   最終的にはゲーム画面になる。
 ===================================== */
 
 #beforeEnding {
+
     position: absolute;
+
     inset: 0;
 
+
     display: flex;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
+
 
     background:
+
         repeating-linear-gradient(
             90deg,
-            #71431f 0px,
-            #71431f 70px,
-            #613719 72px,
-            #613719 76px
+
+            #74441f 0px,
+            #74441f 75px,
+
+            #633818 76px,
+            #633818 80px
         );
 
+
     transition:
-        filter 0.5s ease,
-        opacity 0.5s ease;
+
+        filter 0.5s ease;
+
 }
 
 
-/* 木の板の線 */
+/* 木の横線 */
 
 #beforeEnding::after {
+
     content: "";
 
     position: absolute;
+
     inset: 0;
 
+
     background:
+
         repeating-linear-gradient(
             0deg,
+
             transparent 0px,
-            transparent 110px,
-            rgba(35,15,5,0.45) 112px,
-            rgba(35,15,5,0.45) 116px
+            transparent 115px,
+
+            rgba(
+                40,
+                17,
+                6,
+                0.45
+            ) 117px,
+
+            rgba(
+                40,
+                17,
+                6,
+                0.45
+            ) 121px
         );
 
+
     pointer-events: none;
+
 }
 
 
 #beforeEnding.fade {
-    filter: brightness(0.45);
+
+    filter:
+        brightness(0.4);
+
 }
 
 
 /* =====================================
-   STARTボタン
+   テスト用 START
+
+   本番では後で消す
 ===================================== */
 
 #startButton {
+
     position: relative;
+
     z-index: 5;
 
+
     padding:
-        22px 55px;
+        20px
+        48px;
+
 
     border:
-        7px solid #3b1c0b;
+        6px solid #3e1e0b;
+
 
     outline:
-        4px solid #d5a84c;
+        4px solid #d7a744;
+
 
     border-radius: 8px;
 
+
     background:
+
         linear-gradient(
-            #a9632b,
-            #73401e
+            #a8622c,
+            #713d1c
         );
 
-    color: #fff0bd;
+
+    color: #ffedb3;
+
 
     font-family:
         "Rye",
         Georgia,
         serif;
 
-    font-size:
-        clamp(24px, 4vw, 55px);
 
-    letter-spacing: 4px;
+    font-size:
+
+        clamp(
+            23px,
+            4vw,
+            52px
+        );
+
+
+    letter-spacing: 3px;
+
 
     text-shadow:
-        3px 3px 0 #4b210d;
+
+        3px 3px 0
+        #4b210d;
+
 
     box-shadow:
-        0 12px 0 #3c1c0b,
-        0 18px 25px rgba(0,0,0,0.55);
+
+        0 11px 0
+        #3b1b0a,
+
+        0 18px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.5
+        );
+
 
     cursor: pointer;
+
 }
 
 
 #startButton.hide {
+
     display: none;
+
 }
 
 
 /* =====================================
-   カーテン
+   左右カーテン
 ===================================== */
 
 .curtain {
+
     position: absolute;
 
+
     top: -15%;
+
 
     width: 58%;
     height: 135%;
 
+
     z-index: 20;
 
+
     background:
+
         repeating-linear-gradient(
             90deg,
-            #5d0005 0px,
-            #8e0810 30px,
-            #c11c22 60px,
-            #81060c 90px,
-            #4d0005 120px
+
+            #4c0005 0px,
+
+            #750008 25px,
+
+            #ad1118 55px,
+
+            #d02a2e 72px,
+
+            #930910 100px,
+
+            #570006 130px
         );
 
+
     box-shadow:
-        inset 0 0 45px rgba(0,0,0,0.7),
-        0 0 35px rgba(0,0,0,0.75);
+
+        inset 0 0 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.72
+        ),
+
+        0 0 35px
+        rgba(
+            0,
+            0,
+            0,
+            0.7
+        );
+
 
     transition:
-        transform 1.9s
+
+        transform
+        1.9s
+
         cubic-bezier(
             0.65,
             0,
             0.35,
             1
         );
+
 }
 
 
-/* 左 */
+/* 左カーテン */
 
 #curtainLeft {
+
     left: 0;
 
+
     transform:
+
         translateX(-108%)
         skewY(7deg);
 
+
     border-right:
-        9px solid #c99a3c;
+
+        8px solid
+        #c99a3c;
+
 }
 
 
-/* 右 */
+/* 右カーテン */
 
 #curtainRight {
+
     right: 0;
 
+
     transform:
+
         translateX(108%)
         skewY(-7deg);
 
+
     border-left:
-        9px solid #c99a3c;
+
+        8px solid
+        #c99a3c;
+
 }
 
 
-/* 閉じる */
+/* 閉じた状態 */
 
-#ending.closed #curtainLeft {
+#ending.closed
+#curtainLeft {
+
     transform:
+
         translateX(-7%)
         skewY(7deg);
+
 }
 
-#ending.closed #curtainRight {
+
+#ending.closed
+#curtainRight {
+
     transform:
+
         translateX(7%)
         skewY(-7deg);
+
 }
 
 
 /* =====================================
-   カーテン上部
-===================================== */
-
-#topCurtain {
-    position: absolute;
-
-    z-index: 25;
-
-    top: -90px;
-    left: -5%;
-
-    width: 110%;
-    height: 150px;
-
-    background:
-        repeating-linear-gradient(
-            90deg,
-            #650006,
-            #a30d14 45px,
-            #5b0005 90px
-        );
-
-    border-bottom:
-        10px solid #c89b40;
-
-    border-radius:
-        0 0 50% 50%;
-
-    box-shadow:
-        0 10px 20px rgba(0,0,0,0.65);
-}
-
-
-/* =====================================
-   ENDING内容
+   最後の画面
 ===================================== */
 
 #finalScene {
+
     position: absolute;
+
     inset: 0;
+
 
     z-index: 30;
 
+
     pointer-events: none;
+
 }
 
 
 /* =====================================
-   木の看板
+   木の看板 全体
+
+   左側に配置
 ===================================== */
 
 #sign {
+
     position: absolute;
 
-    left: 50%;
-    top: 11%;
 
-    transform:
-        translate(-50%, -40px)
-        scale(0.75);
+    left: 7%;
+    top: 25%;
 
-    width:
-        min(760px, 78vw);
 
-    padding:
-        24px 35px;
+    width: 48vw;
+    height: 46vh;
 
-    text-align: center;
-
-    background:
-        repeating-linear-gradient(
-            0deg,
-            #a96731 0px,
-            #a96731 20px,
-            #925426 22px,
-            #925426 25px
-        );
-
-    border:
-        9px solid #4a260f;
-
-    outline:
-        4px solid #d2a24c;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 15px 25px rgba(0,0,0,0.6),
-        inset 0 0 20px rgba(70,25,5,0.5);
 
     opacity: 0;
 
+
+    transform:
+
+        translateX(-35vw)
+        scale(0.25)
+        rotate(-8deg);
+
+
+    transform-origin:
+        center;
+
+
     transition:
-        opacity 0.6s ease,
-        transform 0.8s
+
+        opacity 0.15s ease,
+
+        transform
+        0.72s
+
         cubic-bezier(
-            0.2,
-            1.4,
-            0.4,
+            0.18,
+            1.55,
+            0.35,
             1
         );
+
 }
 
 
-#sign.show {
+/* ひょこっと登場 */
+
+#sign.pop {
+
     opacity: 1;
 
+
     transform:
-        translate(-50%, 0)
-        scale(1);
+
+        translateX(0)
+        scale(1)
+        rotate(-1deg);
+
+}
+
+
+/* =====================================
+   登場後の看板を
+   ゆっくり揺らす
+===================================== */
+
+#sign.swing {
+
+    animation:
+
+        signSwing
+        3.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes signSwing {
+
+    0% {
+
+        transform:
+
+            translateY(0)
+            rotate(-1.5deg);
+
+    }
+
+
+    50% {
+
+        transform:
+
+            translateY(-10px)
+            rotate(1.5deg);
+
+    }
+
+
+    100% {
+
+        transform:
+
+            translateY(0)
+            rotate(-1.5deg);
+
+    }
+
+}
+
+
+/* =====================================
+   看板の縦の棒
+===================================== */
+
+#signPost {
+
+    position: absolute;
+
+
+    left: 47%;
+    top: 54%;
+
+
+    width: 7%;
+    height: 60%;
+
+
+    transform:
+
+        translateX(-50%)
+        rotate(-1deg);
+
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            #5c2b0c,
+            #b56d2b,
+            #7b3d13,
+            #4c230b
+        );
+
+
+    border:
+
+        5px solid
+        #442008;
+
+
+    border-radius:
+
+        8px;
+
+
+    box-shadow:
+
+        inset 0 0 10px
+        rgba(
+            0,
+            0,
+            0,
+            0.5
+        ),
+
+        5px 8px 10px
+        rgba(
+            0,
+            0,
+            0,
+            0.4
+        );
+
+}
+
+
+/* =====================================
+   木の板
+===================================== */
+
+.wood {
+
+    position: absolute;
+
+
+    left: 0;
+
+
+    width: 100%;
+    height: 24%;
+
+
+    border:
+
+        6px solid
+        #482108;
+
+
+    border-radius:
+
+        13px 18px 11px 16px;
+
+
+    background:
+
+        repeating-linear-gradient(
+            0deg,
+
+            #b86d27 0px,
+
+            #b86d27 12px,
+
+            #9a541c 14px,
+
+            #9a541c 18px,
+
+            #c0782d 20px
+        );
+
+
+    box-shadow:
+
+        inset 0 0 14px
+        rgba(
+            80,
+            30,
+            5,
+            0.6
+        ),
+
+        7px 9px 10px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+
+}
+
+
+/* 板ごとに少しズラす */
+
+#wood1 {
+
+    top: 3%;
+
+    transform:
+        rotate(-3deg);
+
+}
+
+
+#wood2 {
+
+    top: 21%;
+
+    width: 94%;
+
+    left: 4%;
+
+    transform:
+        rotate(2deg);
+
+}
+
+
+#wood3 {
+
+    top: 39%;
+
+    width: 101%;
+
+    left: -1%;
+
+    transform:
+        rotate(-1deg);
+
+}
+
+
+#wood4 {
+
+    top: 57%;
+
+    width: 91%;
+
+    left: 5%;
+
+    transform:
+        rotate(2.5deg);
+
 }
 
 
@@ -355,164 +723,394 @@ body {
 ===================================== */
 
 #message {
-    color: #fff0b8;
+
+    position: absolute;
+
+
+    z-index: 10;
+
+
+    left: 50%;
+    top: 41%;
+
+
+    transform:
+
+        translate(
+            -50%,
+            -50%
+        )
+        rotate(-1deg);
+
+
+    width: 95%;
+
+
+    text-align: center;
+
+
+    color: #ffd34f;
+
 
     font-size:
-        clamp(40px, 7vw, 100px);
 
-    line-height: 1.1;
+        clamp(
+            35px,
+            5.7vw,
+            90px
+        );
 
-    letter-spacing: 5px;
+
+    line-height: 1;
+
+
+    letter-spacing: 3px;
+
+
+    white-space: nowrap;
+
 
     text-shadow:
-        4px 4px 0 #54240d,
-        -2px -2px 0 #54240d,
-        0 7px 8px rgba(0,0,0,0.45);
+
+        4px 4px 0
+        #6d2e08,
+
+        -2px -2px 0
+        #6d2e08,
+
+        0 6px 8px
+        rgba(
+            0,
+            0,
+            0,
+            0.4
+        );
+
 }
 
 
 /* =====================================
    ウッディ
+
+   右側
 ===================================== */
 
 #woody {
+
     position: absolute;
+
 
     z-index: 35;
 
-    left: 50%;
-    bottom: -4%;
 
-    height: 69vh;
-    max-width: 72vw;
+    right: 3%;
+    bottom: -3%;
+
+
+    height: 82vh;
+    max-width: 46vw;
+
 
     object-fit: contain;
 
-    transform:
-        translateX(-50%)
-        translateY(115%);
 
     opacity: 0;
 
+
+    transform:
+
+        translateY(110%)
+        scale(0.7)
+        rotate(3deg);
+
+
+    transform-origin:
+
+        center bottom;
+
+
     filter:
+
         drop-shadow(
-            0 10px 12px
-            rgba(0,0,0,0.55)
+            0 12px 13px
+            rgba(
+                0,
+                0,
+                0,
+                0.55
+            )
         );
 
+
     transition:
-        transform 1s
+
+        opacity
+        0.2s ease,
+
+        transform
+        0.85s
+
         cubic-bezier(
-            0.2,
-            1.35,
-            0.4,
+            0.18,
+            1.55,
+            0.35,
             1
-        ),
-        opacity 0.35s ease;
+        );
+
 }
 
 
-#woody.show {
+/* ひょこっと登場 */
+
+#woody.pop {
+
     opacity: 1;
 
+
     transform:
-        translateX(-50%)
-        translateY(0);
+
+        translateY(0)
+        scale(1)
+        rotate(0deg);
+
 }
 
 
 /* =====================================
-   星・キラキラ
+   登場後ずっと
+   ゆっくり動く
+===================================== */
+
+#woody.wave {
+
+    animation:
+
+        woodyMove
+        3.3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes woodyMove {
+
+    0% {
+
+        transform:
+
+            translateY(0)
+            rotate(-1deg);
+
+    }
+
+
+    50% {
+
+        transform:
+
+            translateY(-12px)
+            rotate(1.5deg);
+
+    }
+
+
+    100% {
+
+        transform:
+
+            translateY(0)
+            rotate(-1deg);
+
+    }
+
+}
+
+
+/* =====================================
+   キラキラ
 ===================================== */
 
 .sparkle {
+
     position: absolute;
 
-    z-index: 40;
 
-    color: #ffe58a;
+    z-index: 50;
+
+
+    color: #ffe36b;
+
 
     font-size:
-        clamp(25px, 4vw, 55px);
+
+        clamp(
+            45px,
+            7vw,
+            105px
+        );
+
 
     opacity: 0;
 
+
     text-shadow:
-        0 0 12px #fff1a0;
 
-    animation:
-        sparkle 1.1s
-        infinite alternate;
-}
+        0 0 10px #fff5af,
+
+        0 0 25px #ffc83d;
 
 
-#sparkle1 {
-    left: 17%;
-    top: 25%;
-}
+    transition:
 
-#sparkle2 {
-    right: 17%;
-    top: 32%;
+        opacity
+        0.35s ease;
 
-    animation-delay: 0.35s;
-}
-
-#sparkle3 {
-    left: 25%;
-    bottom: 17%;
-
-    animation-delay: 0.7s;
 }
 
 
 .sparkle.show {
+
     opacity: 1;
+
+
+    animation:
+
+        sparkleMove
+        1.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* キラキラ位置 */
+
+#sparkle1 {
+
+    left: 4%;
+    top: 14%;
+
 }
 
 
-@keyframes sparkle {
+#sparkle2 {
 
-    from {
+    left: 48%;
+    top: 13%;
+
+
+    animation-delay:
+        0.4s;
+
+}
+
+
+#sparkle3 {
+
+    left: 46%;
+    bottom: 10%;
+
+
+    animation-delay:
+        0.8s;
+
+}
+
+
+#sparkle4 {
+
+    right: 5%;
+    top: 13%;
+
+
+    animation-delay:
+        1.1s;
+
+}
+
+
+/* キラキラがずっと動く */
+
+@keyframes sparkleMove {
+
+    0% {
+
         transform:
-            scale(0.55)
-            rotate(0deg);
+
+            scale(0.65)
+            rotate(-15deg);
+
+        filter:
+            brightness(0.8);
+
     }
 
-    to {
+
+    50% {
+
         transform:
-            scale(1.25)
-            rotate(25deg);
+
+            scale(1.3)
+            rotate(15deg);
+
+        filter:
+            brightness(1.35);
+
+    }
+
+
+    100% {
+
+        transform:
+
+            scale(0.65)
+            rotate(-15deg);
+
+        filter:
+            brightness(0.8);
+
     }
 
 }
+
 
 </style>
+
 </head>
 
 
 <body>
 
+
 <div id="ending">
 
 
-    <!-- 最初のテスト画面 -->
+    <!-- =================================
+         テスト用背景
+    ================================== -->
 
     <div id="beforeEnding">
 
         <button id="startButton">
+
             ENDING START
+
         </button>
 
     </div>
 
 
-    <!-- 左右カーテン -->
+
+    <!-- =================================
+         左右カーテン
+    ================================== -->
 
     <div
         id="curtainLeft"
         class="curtain">
     </div>
+
 
     <div
         id="curtainRight"
@@ -520,93 +1118,166 @@ body {
     </div>
 
 
-    <!-- 上カーテン -->
 
-    <div id="topCurtain"></div>
-
-
-    <!-- 最後の画面 -->
+    <!-- =================================
+         最後の画面
+    ================================== -->
 
     <div id="finalScene">
 
 
-        <!-- 看板 -->
+        <!-- 木の看板 -->
 
         <div id="sign">
 
-            <div id="message">
-                またきてね！
+
+            <!-- 縦棒 -->
+
+            <div id="signPost">
             </div>
+
+
+            <!-- 木の板 -->
+
+            <div
+                id="wood1"
+                class="wood">
+            </div>
+
+
+            <div
+                id="wood2"
+                class="wood">
+            </div>
+
+
+            <div
+                id="wood3"
+                class="wood">
+            </div>
+
+
+            <div
+                id="wood4"
+                class="wood">
+            </div>
+
+
+            <!-- 文字 -->
+
+            <div id="message">
+
+                またきてね！
+
+            </div>
+
 
         </div>
 
 
-        <!-- ウッディ -->
+
+        <!-- =================================
+             ウッディ
+        ================================== -->
 
         <img
             id="woody"
             src="woody.png"
-            alt="">
+            alt=""
+        >
 
 
-        <!-- キラキラ -->
+
+        <!-- =================================
+             キラキラ
+        ================================== -->
 
         <div
             id="sparkle1"
             class="sparkle">
+
             ✦
+
         </div>
+
 
         <div
             id="sparkle2"
             class="sparkle">
+
             ✦
+
         </div>
+
 
         <div
             id="sparkle3"
             class="sparkle">
+
             ✦
+
+        </div>
+
+
+        <div
+            id="sparkle4"
+            class="sparkle">
+
+            ✦
+
         </div>
 
 
     </div>
 
+
 </div>
 
 
+
 <script>
+
 
 const ending =
     document.getElementById(
         "ending"
     );
 
-const startButton =
-    document.getElementById(
-        "startButton"
-    );
 
 const beforeEnding =
     document.getElementById(
         "beforeEnding"
     );
 
+
+const startButton =
+    document.getElementById(
+        "startButton"
+    );
+
+
 const sign =
     document.getElementById(
         "sign"
     );
+
 
 const woody =
     document.getElementById(
         "woody"
     );
 
+
 const sparkles =
     document.querySelectorAll(
         ".sparkle"
     );
 
+
+
+/* =====================================
+   エンディング開始
+===================================== */
 
 function startEnding() {
 
@@ -618,14 +1289,17 @@ function startEnding() {
     );
 
 
-    /* 背景を暗く */
+    /* 後ろを暗くする */
 
     beforeEnding.classList.add(
         "fade"
     );
 
 
-    /* カーテンが閉じる */
+
+    /* =================================
+       カーテンを閉じる
+    ================================= */
 
     setTimeout(
         function () {
@@ -635,66 +1309,120 @@ function startEnding() {
             );
 
         },
-        350
+
+        300
     );
 
 
-    /* 木の看板 */
+
+    /* =================================
+       看板がひょこっ！
+    ================================= */
 
     setTimeout(
         function () {
 
             sign.classList.add(
-                "show"
+                "pop"
             );
 
         },
-        2500
+
+        2450
     );
 
 
-    /* ウッディ登場 */
+
+    /* =================================
+       ウッディがひょこっ！
+    ================================= */
 
     setTimeout(
         function () {
 
             woody.classList.add(
-                "show"
+                "pop"
             );
 
         },
-        2900
+
+        2750
     );
 
 
-    /* キラキラ */
+
+    /* =================================
+       キラキラ開始
+    ================================= */
 
     setTimeout(
         function () {
 
             sparkles.forEach(
-                function (sparkle) {
+
+                function (
+                    sparkle
+                ) {
 
                     sparkle.classList.add(
                         "show"
                     );
 
                 }
+
             );
 
         },
-        3400
+
+        3200
     );
+
+
+
+    /* =================================
+       登場が終わったら
+       看板とウッディを
+       ずっとゆっくり動かす
+    ================================= */
+
+    setTimeout(
+        function () {
+
+            sign.classList.add(
+                "swing"
+            );
+
+
+            woody.classList.add(
+                "wave"
+            );
+
+        },
+
+        3700
+    );
+
 
 }
 
 
+
+/* =====================================
+   今はボタンでテスト
+===================================== */
+
 startButton.addEventListener(
+
     "click",
+
     startEnding
+
 );
+
 
 </script>
 
+
 </body>
+
 </html>
