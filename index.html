@@ -425,43 +425,31 @@ body {
 
     position: absolute;
 
+    left: 3%;
+    top: 20%;
 
-    left: 7%;
-    top: 25%;
-
-
-    width: 48vw;
-    height: 46vh;
-
+    width: 55vw;
+    height: 53vh;
 
     opacity: 0;
 
-
     transform:
-
-        translateX(-35vw)
+        translateX(-38vw)
         scale(0.25)
         rotate(-8deg);
-
 
     transform-origin:
         center;
 
-
     transition:
-
         opacity 0.15s ease,
-
-        transform
-        0.72s
-
+        transform 0.72s
         cubic-bezier(
             0.18,
             1.55,
             0.35,
             1
         );
-
 }
 
 
@@ -607,60 +595,23 @@ body {
 
     position: absolute;
 
-
     left: 0;
-
 
     width: 100%;
     height: 24%;
 
-
-    border:
-
-        6px solid
-        #482108;
-
+    border: none;
 
     border-radius:
-
         13px 18px 11px 16px;
-
-
-    background:
-
-        repeating-linear-gradient(
-            0deg,
-
-            #b86d27 0px,
-
-            #b86d27 12px,
-
-            #9a541c 14px,
-
-            #9a541c 18px,
-
-            #c0782d 20px
-        );
-
 
     box-shadow:
 
         inset 0 0 14px
-        rgba(
-            80,
-            30,
-            5,
-            0.6
-        ),
+        rgba(70, 25, 5, 0.35),
 
-        7px 9px 10px
-        rgba(
-            0,
-            0,
-            0,
-            0.35
-        );
-
+        5px 7px 8px
+        rgba(0, 0, 0, 0.22);
 }
 
 
@@ -673,6 +624,14 @@ body {
     transform:
         rotate(-3deg);
 
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #c77a32 0px,
+            #c77a32 13px,
+            #b56829 15px,
+            #b56829 19px
+        );
 }
 
 
@@ -681,12 +640,19 @@ body {
     top: 21%;
 
     width: 94%;
-
     left: 4%;
 
     transform:
         rotate(2deg);
 
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #824015 0px,
+            #824015 13px,
+            #6c300f 15px,
+            #6c300f 19px
+        );
 }
 
 
@@ -695,12 +661,19 @@ body {
     top: 39%;
 
     width: 101%;
-
     left: -1%;
 
     transform:
         rotate(-1deg);
 
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #bd6d29 0px,
+            #bd6d29 13px,
+            #a75920 15px,
+            #a75920 19px
+        );
 }
 
 
@@ -709,12 +682,46 @@ body {
     top: 57%;
 
     width: 91%;
-
     left: 5%;
 
     transform:
         rotate(2.5deg);
 
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #71330f 0px,
+            #71330f 13px,
+            #572408 15px,
+            #572408 19px
+        );
+}
+
+#sign::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: -2%;
+    top: 0%;
+
+    width: 104%;
+    height: 82%;
+
+    border:
+        9px solid #452006;
+
+    border-radius:
+        24px;
+
+    box-shadow:
+        0 10px 15px
+        rgba(0, 0, 0, 0.38);
+
+    pointer-events: none;
+
+    z-index: 8;
 }
 
 
@@ -726,66 +733,48 @@ body {
 
     position: absolute;
 
-
     z-index: 10;
-
 
     left: 50%;
     top: 41%;
 
-
     transform:
-
-        translate(
-            -50%,
-            -50%
-        )
+        translate(-50%, -50%)
         rotate(-1deg);
 
-
-    width: 95%;
-
+    width: 96%;
 
     text-align: center;
 
+    color: #ffd447;
 
-    color: #ffd34f;
-
+    font-family:
+        "Rye",
+        Georgia,
+        serif;
 
     font-size:
-
         clamp(
-            35px,
-            5.7vw,
-            90px
+            43px,
+            6.5vw,
+            108px
         );
 
+    font-weight: 900;
 
     line-height: 1;
 
-
-    letter-spacing: 3px;
-
+    letter-spacing: 4px;
 
     white-space: nowrap;
 
+    -webkit-text-stroke:
+        2px #6a2d08;
 
     text-shadow:
-
-        4px 4px 0
-        #6d2e08,
-
-        -2px -2px 0
-        #6d2e08,
-
-        0 6px 8px
-        rgba(
-            0,
-            0,
-            0,
-            0.4
-        );
-
+        4px 4px 0 #6a2d08,
+        0 7px 8px
+        rgba(0, 0, 0, 0.45);
 }
 
 
@@ -799,64 +788,41 @@ body {
 
     position: absolute;
 
-
     z-index: 35;
 
+    right: -2%;
+    bottom: -31%;
 
-    right: 3%;
-    bottom: -3%;
-
-
-    height: 82vh;
-    max-width: 46vw;
-
+    height: 128vh;
+    max-width: 55vw;
 
     object-fit: contain;
 
-
     opacity: 0;
 
-
     transform:
-
         translateY(110%)
         scale(0.7)
         rotate(3deg);
 
-
     transform-origin:
-
         center bottom;
 
-
     filter:
-
         drop-shadow(
-            0 12px 13px
-            rgba(
-                0,
-                0,
-                0,
-                0.55
-            )
+            0 14px 15px
+            rgba(0, 0, 0, 0.55)
         );
 
-
     transition:
-
-        opacity
-        0.2s ease,
-
-        transform
-        0.85s
-
+        opacity 0.2s ease,
+        transform 0.85s
         cubic-bezier(
             0.18,
             1.55,
             0.35,
             1
         );
-
 }
 
 
@@ -1316,38 +1282,38 @@ function startEnding() {
 
 
     /* =================================
-       看板がひょこっ！
-    ================================= */
+   ウッディが先にひょこっ！
+================================= */
 
-    setTimeout(
-        function () {
+setTimeout(
+    function () {
 
-            sign.classList.add(
-                "pop"
-            );
+        woody.classList.add(
+            "pop"
+        );
 
-        },
+    },
 
-        2450
-    );
+    2350
+);
 
 
 
-    /* =================================
-       ウッディがひょこっ！
-    ================================= */
+/* =================================
+   そのあと看板がひょこっ！
+================================= */
 
-    setTimeout(
-        function () {
+setTimeout(
+    function () {
 
-            woody.classList.add(
-                "pop"
-            );
+        sign.classList.add(
+            "pop"
+        );
 
-        },
+    },
 
-        2750
-    );
+    2800
+);
 
 
 
